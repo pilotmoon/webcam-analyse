@@ -1,20 +1,9 @@
 #include <stdio.h>
-#include <jpeglib.h>
 #include <stdlib.h>
-#include <math.h>
+#include <jpeglib.h>
 	
-/**
- * read_jpeg_file Reads from a jpeg file on disk specified by filename and saves into the 
- * raw_image buffer in an uncompressed format.
- * 
- * \returns positive integer if successful, -1 otherwise
- * \param *filename char string specifying the file name to read from
- *
- */
-int read_jpeg_file( char *filename, unsigned char **raw_image_out, struct jpeg_decompress_struct *cinfo)
+int read_jpeg_file(har *filename, unsigned char **raw_image_out, struct jpeg_decompress_struct *cinfo)
 {
-	/* these are standard libjpeg structures for reading(decompression) */
-
 	struct jpeg_error_mgr jerr;
 	
 	/* libjpeg data structure for storing one row, that is, scanline of an image */
